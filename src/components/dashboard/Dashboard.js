@@ -6,12 +6,13 @@ import {connect} from 'react-redux';
 class Dashboard extends Component{
     render(){
         console.log(this.props);
+        const {projects} = this.props;
         return (
             <div className="dashboard container">
                 <div className="row">
                     {/* div for project list*/}
                     <div className="col s12 m6">
-                        <ProjectList/>
+                        <ProjectList projects={projects}/>
                     </div>
                     {/* div for notifications*/}
                     <div className="col s12 m5 offset-m1">
